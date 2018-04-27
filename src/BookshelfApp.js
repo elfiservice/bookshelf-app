@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './BookshelfApp.css';
+import Shelves from './Shelves';
 
 class BookshelfApp extends Component {
     constructor(props) {
@@ -15,14 +16,8 @@ class BookshelfApp extends Component {
   render() {
     return (
       <div className="App">
-        My Bookshelf
-        <main>
-            {this.shelves.map( shelf => (
-               <section>
-                   <h2>{shelf}</h2>
-               </section> 
-            ))}
-        </main>
+        <h1>My Bookshelf</h1>
+        <Shelves  shelvesNames={this.shelves}/>
       </div>
     );
   }
