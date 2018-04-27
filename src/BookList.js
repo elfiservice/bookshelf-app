@@ -7,7 +7,7 @@ class BookList extends Component {
         const shelfName = this.props.shelfName;
         return (
             
-            <div> BookList in {shelfName} 
+            <div> BookList in {shelfName.name} 
             </div>
         )
     }

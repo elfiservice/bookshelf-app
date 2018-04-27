@@ -22,9 +22,9 @@ class Shelves extends Component {
         
         return (
             <main>
-            {shelvesNames.map( (shelf, index) => (
-               <section className="shelf-container" key={index}>
-                   <h2>{shelf}</h2>
+            {shelvesNames.map( (shelf) => (
+               <section className="shelf-container" key={shelf.key}>
+                   <h2>{shelf.name}</h2>
                    <div className="shelf-book-list">
                         <BookList shelfName={shelf} />
                    </div>

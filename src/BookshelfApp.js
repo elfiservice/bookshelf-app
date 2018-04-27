@@ -7,10 +7,11 @@ class BookshelfApp extends Component {
     constructor(props) {
         super(props);
         this.shelves = [
-            'currently reading',
-            'want to read',
-            'read'
+            { key: 'currentlyReading', name: 'Currently Reading'},
+            { key: 'wantToRead', name: 'Want To Read'},
+            { key: 'read', name: 'Read'}
         ]
+
         
     }
   render() {
