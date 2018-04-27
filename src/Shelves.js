@@ -6,7 +6,7 @@ class Shelves extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            listOfBooks: ''
+            listOfBooks: []
         }
     }
 
@@ -26,7 +26,7 @@ class Shelves extends Component {
                <section className="shelf-container" key={shelf.key}>
                    <h2>{shelf.name}</h2>
                    <div className="shelf-book-list">
-                        <BookList shelfName={shelf} />
+                        <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} />
                    </div>
                </section> 
             ))}
