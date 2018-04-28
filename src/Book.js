@@ -13,7 +13,7 @@ class Book extends Component {
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want To Read</option>
                     <option value="read">Read</option>
-                    <option value="">None</option>
+                    <option value="none">None</option>
                 </select>
             </div>
         )

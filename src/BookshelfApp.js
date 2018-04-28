@@ -16,7 +16,11 @@ class BookshelfApp extends Component {
   render() {
     return (
       <div className="App">
-        <h1>My Bookshelf</h1>
+        <div className="container main-header">
+          <header className="content">
+            <h1 className="text-center">My Bookshelf</h1>
+          </header>
+        </div>
         <Shelves  shelvesNames={this.shelves}/>
       </div>
     );

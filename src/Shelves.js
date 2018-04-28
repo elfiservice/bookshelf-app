@@ -29,14 +29,16 @@ class Shelves extends Component {
         console.log(this.state.listOfBooks);
         
         return (
-            <main>
-            {shelvesNames.map( (shelf) => (
-               <section className="shelf-container" key={shelf.key}>
-                   <h2>{shelf.name}</h2>
-                    <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} onChangeShelf={this.changeShelf} />
-               </section> 
-            ))}
-        </main>
+            <main className="container shelves">
+                <div className="content">
+                    {shelvesNames.map( (shelf) => (
+                    <section className="shelf-container" key={shelf.key}>
+                        <h2>{shelf.name}</h2>
+                            <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} onChangeShelf={this.changeShelf} />
+                    </section> 
+                    ))}
+                </div>
+            </main>
         )
     }
 }

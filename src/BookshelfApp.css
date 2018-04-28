@@ -1,0 +1,53 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* .main-header {
+    background-color: cadetblue;
+    padding: 20px 0;
+    color: azure;
+} */
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.main-header {
+    background-color: darkcyan;
+    padding: 20px 0;
+}
+
+.shelves {
+    margin: 40px 0;
+}
+
+.shelf-container {
+    margin-bottom: 20px;
+}
+
+.shelf-container h2 {
+    border-bottom: 1px solid green;
+}
+
+.book-container {
+    margin: 20px 0;
+}
+
+.book-container h3 {
+    display: none;
+}
