@@ -16,6 +16,10 @@ class Shelves extends Component {
         });     
     }
 
+    changeShelf(bookId) {
+        alert('change ! ID = ' + bookId);
+    }
+
     render() {
         const shelvesNames = this.props.shelvesNames;
         console.log(this.state.listOfBooks);
@@ -25,7 +29,7 @@ class Shelves extends Component {
             {shelvesNames.map( (shelf) => (
                <section className="shelf-container" key={shelf.key}>
                    <h2>{shelf.name}</h2>
-                    <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} />
+                    <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} onChangeShelf={this.changeShelf} />
                </section> 
             ))}
         </main>
