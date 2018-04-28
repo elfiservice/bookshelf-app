@@ -25,9 +25,7 @@ class Shelves extends Component {
             {shelvesNames.map( (shelf) => (
                <section className="shelf-container" key={shelf.key}>
                    <h2>{shelf.name}</h2>
-                   <div className="shelf-book-list">
-                        <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} />
-                   </div>
+                    <BookList shelfName={shelf} listOfBooks={this.state.listOfBooks} />
                </section> 
             ))}
         </main>
