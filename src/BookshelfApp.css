@@ -1,3 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+
 *, *:after, *:before {
     margin: 0;
     padding: 0;
@@ -6,11 +12,16 @@
     -webkit-box-sizing: border-box;
 }
 
-/* .main-header {
-    background-color: cadetblue;
-    padding: 20px 0;
-    color: azure;
-} */
+body {
+	background-color: #fff;
+}
+
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .container {
     display: block;
@@ -30,6 +41,7 @@
 .main-header {
     background-color: darkcyan;
     padding: 20px 0;
+    color: #fff;
 }
 
 .shelves {
@@ -50,4 +62,18 @@
 
 .book-container h3 {
     display: none;
+}
+
+.book-container {
+    width: 49%;
+    margin-right: 1%;
+}
+
+.book-content {
+    position: relative;
+}
+
+.book-content select {
+    position: absolute;
+    left: 0;
 }

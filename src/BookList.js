@@ -9,7 +9,7 @@ class BookList extends Component {
 
         return (
             
-            <div className="booklist-container"> 
+            <div className="booklist-container flex-box"> 
                 
                 {listOfBooks.filter((book) => book.shelf === shelfName.key)
                     .map( book => (
