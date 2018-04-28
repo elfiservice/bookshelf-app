@@ -8,6 +8,7 @@ class Shelves extends Component {
         this.state = {
             listOfBooks: []
         }
+        this.changeShelf = this.changeShelf.bind(this);
     }
 
     componentDidMount() {
@@ -16,8 +17,11 @@ class Shelves extends Component {
         });     
     }
 
-    changeShelf(bookId) {
-        alert('change ! ID = ' + bookId);
+    changeShelf(book, shelf) {
+        alert('You change the ' + book.title + " book to " + shelf + " shelf!");
+        BooksAPI.update(book, shelf).then(data => {
+            this.componentDidMount();
+        });   
     }
 
     render() {
