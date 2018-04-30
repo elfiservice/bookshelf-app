@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BookList from './BookList';
 import * as BooksAPI from './BooksAPI';
 
@@ -38,6 +39,7 @@ class Shelves extends Component {
                     </section> 
                     ))}
                 </div>
+                <Link to="/search" className="search-main-btn" > &#9532; </Link> 
             </main>
         )
     }

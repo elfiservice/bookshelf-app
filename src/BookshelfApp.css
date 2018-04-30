@@ -114,3 +114,16 @@ select::-ms-expand {
     margin: 0 0 0 0;
     pointer-events:none;
 }
+
+/* BTN TO NAVIGATE TO SEARCH PAGE */
+.search-main-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 15px 17px;
+    font-size: 20px;
+    background-color: brown;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+}
