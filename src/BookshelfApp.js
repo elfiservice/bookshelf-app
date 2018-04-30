@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './BookshelfApp.css';
 import Shelves from './Shelves';
+import SearchBooks from './SearchBooks';
 
 class BookshelfApp extends Component {
     constructor(props) {
@@ -21,7 +23,11 @@ class BookshelfApp extends Component {
             <h1 className="text-center">My Bookshelf</h1>
           </header>
         </div>
-        <Shelves  shelvesNames={this.shelves}/>
+        <Route exact path="/" render={() => (
+          <Shelves  shelvesNames={this.shelves}/>
+        )} />
+
+        <Route path="/search" component={SearchBooks} />
       </div>
     );
   }
