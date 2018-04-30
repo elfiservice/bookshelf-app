@@ -14,7 +14,6 @@ class BookList extends Component {
                 {listOfBooks.filter((book) => book.shelf === shelfName.key)
                     .map( book => (
                         <article className="book-container" key={book.id}>
-                            <h3>{book.title}</h3>
                             <Book book={book} changeShelf={onChangeShelf} />
                         </article>
                         

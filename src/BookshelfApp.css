@@ -62,12 +62,18 @@ body {
 }
 
 .book-container h3 {
-    display: none;
+    font-size: .8em;
 }
 
 .book-container {
     width: 49%;
     margin-right: 1%;
+}
+
+.book-content > p {
+    font-size: .8em;
+    font-style: italic;
+    color: cadetblue;
 }
 
 /* ----- STYLE SELECT ELEMENT TO A BUTTON ---------*/

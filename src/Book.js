@@ -18,6 +18,8 @@ class Book extends Component {
                         <option value="none">None</option>
                     </select>
                 </div>
+                <h3>{book.title}</h3>
+                <p>{book.authors[0]}</p>
             </div>
         )
     }
