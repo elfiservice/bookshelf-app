@@ -5,12 +5,13 @@ class ListOfBooksSearch extends Component {
     render() {
         const { listOfBooks } = this.props;
         let list;
-        
-        if(!listOfBooks.length) {
+        console.log(listOfBooks);
+        if(listOfBooks === undefined || listOfBooks.error) {
             list = [];
         } else {
             list = listOfBooks;
         }
+        
         
         return(
             <section className="container">
