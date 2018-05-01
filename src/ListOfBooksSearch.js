@@ -15,9 +15,9 @@ class ListOfBooksSearch extends Component {
         
         return(
             <section className="container">
-                <div className="content">
+                <div className="content flex-box">
                     {list.map( book => (
-                            <article className="book" key={book.id}>
+                            <article className="book-container" key={book.id}>
                                 <Book book={book} />
                             </article>
                         ))

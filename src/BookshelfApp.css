@@ -63,6 +63,7 @@ body {
 
 .book-container h3 {
     font-size: .8em;
+    width: 80%;
 }
 
 .book-container {
@@ -76,10 +77,15 @@ body {
     color: cadetblue;
 }
 
+.book-content img {
+    width: 100%;
+}
+
 /* ----- STYLE SELECT ELEMENT TO A BUTTON ---------*/
 .book-select-container {
     position: relative;
     width: 35px;
+    float: right;
 }
 
 select {

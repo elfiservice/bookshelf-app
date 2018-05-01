@@ -7,8 +7,9 @@ class Book extends Component {
         const onChangeShelf = this.props.changeShelf;
         return (
             <div className="book-content">
-                <div className="book-select-container">
                 <img src={book.imageLinks.thumbnail} alt={book.title + " book"} />
+                <div className="book-select-container">
+                
                     <svg className="book-select-icon"> </svg>
                     <select className="book-select-content" defaultValue={book.shelf} onChange={(e) => onChangeShelf(book, e.target.value)}>
                         <option disabled>Move to...</option>
