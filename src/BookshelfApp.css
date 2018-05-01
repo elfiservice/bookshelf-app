@@ -67,9 +67,13 @@ body {
 }
 
 .book-container {
-    width: 49%;
-    margin-right: 1%;
+    width: 45%;
+    margin-right: 5%;
 }
+
+.book-container:last-of-type {
+    margin-right: 0%;
+  }
 
 .book-content > p {
     font-size: .8em;
