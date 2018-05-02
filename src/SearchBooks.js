@@ -32,6 +32,8 @@ class SearchBooks extends Component {
 
     render() {
         const { valueInputSearch } = this.state;
+        const { shelvesNames, onChangeShelf } = this.props;
+        console.log(shelvesNames);
         
         return (
             <main className="container">
@@ -45,7 +47,7 @@ class SearchBooks extends Component {
                         onChange={(event) => this.handleQuery(event.target.value)}
                     />
                 </section>
-                <ListOfBooksSearch listOfBooksFound={this.state.listOfBooksFound} />
+                <ListOfBooksSearch listOfBooksFound={this.state.listOfBooksFound} onChangeShelf={onChangeShelf} />
             </main>
         )
     }

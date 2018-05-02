@@ -54,7 +54,10 @@ class BookshelfApp extends Component {
         )} />
 
         <Route path="/search" render={() => (
-          <SearchBooks shelvesNames={this.shelves} />
+          <SearchBooks 
+            shelvesNames={this.shelves}
+            onChangeShelf={this.changeShelf}
+          />
         )} />
       </div>
     );

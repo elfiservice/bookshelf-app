@@ -3,7 +3,7 @@ import Book from './Book';
 
 class ListOfBooksSearch extends Component {
     render() {
-        const { listOfBooksFound } = this.props;
+        const { listOfBooksFound, onChangeShelf } = this.props;
         console.log(listOfBooksFound);
         
         return(
@@ -11,7 +11,7 @@ class ListOfBooksSearch extends Component {
                 <div className="content flex-box">
                     {listOfBooksFound.map( book => (
                             <article className="book-container" key={book.id}>
-                                <Book book={book} />
+                                <Book book={book} changeShelf={onChangeShelf} />
                             </article>
                         ))
                     }
