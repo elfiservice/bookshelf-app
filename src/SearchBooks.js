@@ -7,7 +7,7 @@ class SearchBooks extends Component {
         super(props);
         this.state = {
             valueInputSearch: '',
-            listOfBooks: []
+            listOfBooksFound: []
         }
     }
 
@@ -15,20 +15,23 @@ class SearchBooks extends Component {
         this.setState({
             valueInputSearch: query
         })
-        console.log(query);
-        setTimeout( () => this.searchBooks(query), 1000);
-        
+        setTimeout( () => this.searchBooks(query), 1000);      
     }
 
     searchBooks(query) {
         BooksAPI.search(query).then( books => {
-            this.setState({ listOfBooks: books })         
+            let listOfBooksFound;
+            if(books === undefined || books.error) {
+                listOfBooksFound = [];
+            } else {
+                listOfBooksFound = books;
+            }
+            this.setState({ listOfBooksFound: listOfBooksFound })         
         })
     }
 
     render() {
         const { valueInputSearch } = this.state;
-        //console.log(this.state.listOfBooks);
         
         return (
             <main className="container">
@@ -42,7 +45,7 @@ class SearchBooks extends Component {
                         onChange={(event) => this.handleQuery(event.target.value)}
                     />
                 </section>
-                <ListOfBooksSearch listOfBooks={this.state.listOfBooks} />
+                <ListOfBooksSearch listOfBooksFound={this.state.listOfBooksFound} />
             </main>
         )
     }
