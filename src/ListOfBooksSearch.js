@@ -12,7 +12,6 @@ class ListOfBooksSearch extends Component {
             list = listOfBooks;
         }
         
-        
         return(
             <section className="container">
                 <div className="content flex-box">

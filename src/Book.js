@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import noImage from './no-image.png';
 
 class Book extends Component {
 
@@ -7,7 +8,7 @@ class Book extends Component {
         const onChangeShelf = this.props.changeShelf;
         return (
             <div className="book-content">
-                <img src={book.imageLinks.thumbnail} alt={book.title + " book"} />
+                <img src={(book.imageLinks ? book.imageLinks.thumbnail : noImage)} alt={book.title + " book"} />
                 <div className="book-select-container">
                 
                     <svg className="book-select-icon"> </svg>
