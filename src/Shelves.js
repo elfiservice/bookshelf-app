@@ -21,13 +21,18 @@ class Shelves extends Component {
     changeShelf(book, shelf) {
         alert('You change the ' + book.title + " book to " + shelf + " shelf!");
         BooksAPI.update(book, shelf).then(data => {
-            this.componentDidMount();
+            let listOfBooks = this.state.listOfBooks;
+            for(let i = 0; i < listOfBooks.length; i++) {
+                if(listOfBooks[i].id === book.id) {
+                    listOfBooks[i].shelf = shelf;
+                    this.setState({ listOfBooks: listOfBooks })
+                  }
+            }
         });   
     }
 
     render() {
         const shelvesNames = this.props.shelvesNames;
-        console.log(this.state.listOfBooks);
         
         return (
             <main className="container shelves">

@@ -27,7 +27,9 @@ class BookshelfApp extends Component {
           <Shelves  shelvesNames={this.shelves}/>
         )} />
 
-        <Route path="/search" component={SearchBooks} />
+        <Route path="/search" render={() => (
+          <SearchBooks shelvesNames={this.shelves} />
+        )} />
       </div>
     );
   }
