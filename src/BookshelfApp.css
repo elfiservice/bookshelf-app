@@ -73,7 +73,7 @@ body {
 
 .book-container:last-of-type {
     margin-right: 0%;
-  }
+}
 
 .book-content > p {
     font-size: .8em;
@@ -161,6 +161,36 @@ select::-ms-expand {
     margin-bottom: 50px;
 }
 
-@media only screen and (min-width: 750px) {
 
+@media only screen and (min-width: 490px) and (max-width: 768px) {
+    .book-container {
+        width: 30%;
+        margin-right: 3%;
+    }
+    
+    .book-container:nth-child(3n+3) {
+        margin-right: 0%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1119px)  {
+    .book-container {
+        width: 22%;
+        margin-right: 3%;
+    }
+    
+    .book-container:nth-child(4n+4) {
+        margin-right: 0%;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .book-container {
+        width: 14%;
+        margin-right: 2%;
+    }
+    
+    .book-container:nth-child(6n+6) {
+        margin-right: 0%;
+    }
 }
