@@ -6,6 +6,7 @@ class Book extends Component {
     render() {
         const book = this.props.book;
         const onChangeShelf = this.props.changeShelf;
+
         return (
             <div className="book-content">
                 <img src={(book.imageLinks ? book.imageLinks.thumbnail : noImage)} alt={book.title + " book"} />

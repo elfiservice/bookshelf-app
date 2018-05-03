@@ -4,7 +4,7 @@ import Book from './Book';
 class ListOfBooksSearch extends Component {
     render() {
         const { listOfBooksFound, onChangeShelf } = this.props;
-        console.log(listOfBooksFound);
+        //console.log(listOfBooksFound);
         
         return(
             <section className="container">

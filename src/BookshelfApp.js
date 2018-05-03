@@ -20,9 +20,17 @@ class BookshelfApp extends Component {
   }
 
   componentDidMount() {
+    this.fetchMyBookshelf();
+  }
+
+  componentWillUpdate() {
+    this.fetchMyBookshelf();
+  }
+
+  fetchMyBookshelf() {
     BooksAPI.getAll().then(books => {
-        this.setState({ listOfBooks: books });
-    });     
+      this.setState({ listOfBooks: books });
+    }); 
   }
 
   changeShelf(book, shelf) {
@@ -55,8 +63,8 @@ class BookshelfApp extends Component {
 
         <Route path="/search" render={() => (
           <SearchBooks 
-            shelvesNames={this.shelves}
             onChangeShelf={this.changeShelf}
+            listOfBooks={this.state.listOfBooks}
           />
         )} />
       </div>

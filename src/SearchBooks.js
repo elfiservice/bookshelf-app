@@ -9,13 +9,18 @@ class SearchBooks extends Component {
             valueInputSearch: '',
             listOfBooksFound: []
         }
+        this.bookshelfList = this.props.listOfBooks;
+    }
+
+    componentWillUpdate() {
+        this.bookshelfList = this.props.listOfBooks;
     }
 
     handleQuery(query) {       
         this.setState({
             valueInputSearch: query
         })
-        setTimeout( () => this.searchBooks(query), 1000);      
+        setTimeout( () => this.searchBooks(query), 500);      
     }
 
     searchBooks(query) {
@@ -26,14 +31,25 @@ class SearchBooks extends Component {
             } else {
                 listOfBooksFound = books;
             }
+            //check the shelf for each book found with my booksShelf
+            const bookshelfList = this.bookshelfList;
+            for(let i = 0; i < listOfBooksFound.length; i++) {
+                for(let j = 0; j < bookshelfList.length; j++) {
+                    if(listOfBooksFound[i].id === bookshelfList[j].id) {
+                        listOfBooksFound[i].shelf = bookshelfList[j].shelf;                        
+                    } else if(!listOfBooksFound[i].shelf) {
+                        listOfBooksFound[i].shelf = 'none';
+                    }
+                }
+            }
+
             this.setState({ listOfBooksFound: listOfBooksFound })         
         })
     }
 
     render() {
         const { valueInputSearch } = this.state;
-        const { shelvesNames, onChangeShelf } = this.props;
-        console.log(shelvesNames);
+        const { onChangeShelf } = this.props;
         
         return (
             <main className="container">
