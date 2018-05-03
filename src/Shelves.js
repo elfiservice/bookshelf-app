@@ -17,7 +17,7 @@ class Shelves extends Component {
                     </section> 
                     ))}
                 </div>
-                <Link to="/search" className="search-main-btn" > &#9532; </Link> 
+                <Link to="/search" className="nav-main-btn" > &#9532; </Link> 
             </main>
         )
     }

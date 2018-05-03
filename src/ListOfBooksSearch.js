@@ -7,7 +7,7 @@ class ListOfBooksSearch extends Component {
         //console.log(listOfBooksFound);
         
         return(
-            <section className="container">
+            <section className="container list-of-books-found">
                 <div className="content flex-box">
                     {listOfBooksFound.map( book => (
                             <article className="book-container" key={book.id}>

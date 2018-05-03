@@ -45,7 +45,7 @@ body {
 }
 
 .shelves {
-    margin: 40px 0;
+    margin: 40px 0 50px;
 }
 
 .shelf-container {
@@ -126,7 +126,7 @@ select::-ms-expand {
 }
 
 /* BTN TO NAVIGATE TO SEARCH PAGE */
-.search-main-btn {
+.nav-main-btn {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -136,6 +136,7 @@ select::-ms-expand {
     color: #fff;
     text-decoration: none;
     border-radius: 50%;
+    z-index: 20;
 }
 
 /* SEARCH INPUT */
@@ -154,4 +155,12 @@ select::-ms-expand {
     background-position: 8px 8px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
+}
+
+.list-of-books-found {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 750px) {
+
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI';
 import ListOfBooksSearch from './ListOfBooksSearch';
+import { Link } from 'react-router-dom';
 
 class SearchBooks extends Component {
     constructor(props) {
@@ -52,7 +53,7 @@ class SearchBooks extends Component {
         const { onChangeShelf } = this.props;
         
         return (
-            <main className="container">
+            <main className="container search-books">
                 <section className="content search-books--content">
                     <input 
                         className="search-books--input" 
@@ -64,6 +65,7 @@ class SearchBooks extends Component {
                     />
                 </section>
                 <ListOfBooksSearch listOfBooksFound={this.state.listOfBooksFound} onChangeShelf={onChangeShelf} />
+                <Link to="/" className="nav-main-btn" > &#8617; </Link> 
             </main>
         )
     }
