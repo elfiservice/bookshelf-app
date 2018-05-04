@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { shelvesList } from './constants';
 import * as BooksAPI from './BooksAPI';
 import { Route } from 'react-router-dom';
 import './BookshelfApp.css';
@@ -8,11 +9,7 @@ import SearchBooks from './SearchBooks';
 class BookshelfApp extends Component {
   constructor(props) {
       super(props);
-      this.shelves = [
-          { key: 'currentlyReading', name: 'Currently Reading'},
-          { key: 'wantToRead', name: 'Want To Read'},
-          { key: 'read', name: 'Read'}
-      ]
+      this.shelves = shelvesList;
       this.state = {
         listOfBooks: []
     }
