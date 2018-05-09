@@ -6,7 +6,7 @@ import BookshelfApp from './BookshelfApp';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <BrowserRouter><BookshelfApp /></BrowserRouter>, 
+    <BrowserRouter basename={process.env.PUBLIC_URL} ><BookshelfApp /></BrowserRouter>, 
     document.getElementById('root')
 );
 registerServiceWorker();
